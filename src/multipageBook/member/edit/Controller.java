@@ -1,6 +1,6 @@
-package JP2.multipageBook.member.edit;
+package multipageBook.member.edit;
 
-import JP2.multipageBook.Main;
+import multipageBook.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,9 +19,9 @@ public class Controller implements Initializable {
     public Text errors;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtName.setText(JP2.multipageBook.member.list.Controller.editMember.getName());
-        txtCode.setText(String.valueOf(JP2.multipageBook.member.list.Controller.editMember.getCode()));
-        txtEmail.setText(JP2.multipageBook.member.list.Controller.editMember.getEmail());
+        txtName.setText(multipageBook.member.list.Controller.editMember.getName());
+        txtCode.setText(String.valueOf(multipageBook.member.list.Controller.editMember.getCode()));
+        txtEmail.setText(multipageBook.member.list.Controller.editMember.getEmail());
         txtCode.setEditable(false);
     }
 
@@ -41,8 +41,8 @@ public class Controller implements Initializable {
             if(!txtEmail.getText().contains("@")||txtEmail.getText().startsWith("@")||txtEmail.getText().endsWith("@")){
                 throw new Exception("Vui lòng nhập 1 email");
             }
-            JP2.multipageBook.member.list.Controller.editMember.setName(txtName.getText());
-            JP2.multipageBook.member.list.Controller.editMember.setEmail(txtEmail.getText());
+            multipageBook.member.list.Controller.editMember.setName(txtName.getText());
+            multipageBook.member.list.Controller.editMember.setEmail(txtEmail.getText());
             goToList(null);
 
         }catch (Exception e){

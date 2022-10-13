@@ -1,13 +1,14 @@
-package JP2.multipageBook.member.form;
+package multipageBook.member.form;
 
-import JP2.multipageBook.Main;
-import JP2.multipageBook.Member;
+
+import multipageBook.member.Member;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import multipageBook.Main;
 
 public class Controller {
     public TextField txtName;
@@ -25,12 +26,12 @@ public class Controller {
             }
             Integer num = Integer.parseInt(txtCode.getText());
             Member m = new Member(txtName.getText(),num,txtEmail.getText());
-            for(Member s: JP2.multipageBook.member.list.Controller.listMember){
+            for(Member s: multipageBook.member.list.Controller.listMember){
                 if(s.getCode()==num){
                     return;
                 }
             }
-            JP2.multipageBook.member.list.Controller.listMember.add(m);
+            multipageBook.member.list.Controller.listMember.add(m);
             goToList(null);
 
         }catch (Exception e){

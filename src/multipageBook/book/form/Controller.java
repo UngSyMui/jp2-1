@@ -1,7 +1,7 @@
-package JP2.multipageBook.book.form;
+package multipageBook.book.form;
 
-import JP2.multipageBook.Book;
-import JP2.multipageBook.Main;
+import multipageBook.book.Book;
+import multipageBook.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,12 +24,12 @@ public class Controller {
             }
             Integer num = Integer.parseInt(txtCode.getText());
             Book b = new Book(txtName.getText(),num,txtDescription.getText());
-            for(Book s: JP2.multipageBook.book.list.Controller.listBook){
+            for(Book s: multipageBook.book.list.Controller.listBook){
                 if(s.getCode()==num){
                     return;
                 }
             }
-            JP2.multipageBook.book.list.Controller.listBook.add(b);
+            multipageBook.book.list.Controller.listBook.add(b);
             goToList(null);
 
         }catch (Exception e){

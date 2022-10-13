@@ -1,4 +1,4 @@
-package JP2.multipageBook;
+package multipageBook.member;
 
 public class Member {
     public String name;

@@ -1,4 +1,6 @@
-package JP2;
+
+
+import JP2.Student;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -27,9 +29,9 @@ public class Main {
         System.out.println("Poll:"+numbers.poll()+" remain"+numbers.size());
         System.out.println("Poll:"+numbers.poll()+" remain"+numbers.size());
         System.out.println("Poll:"+numbers.poll()+" remain"+numbers.size());
-        PriorityQueue<Student> st = new PriorityQueue<>(new Comparator<Student>() {
+        PriorityQueue<JP2.Student> st = new PriorityQueue<>(new Comparator<JP2.Student>() {
             @Override
-            public int compare(Student o1, Student o2) {
+            public int compare(JP2.Student o1, JP2.Student o2) {
                 return o2.getMark()-o1.getMark();
             }
         });

@@ -1,7 +1,7 @@
-package JP2.multipageBook.book.edit;
+package multipageBook.book.edit;
 
-import JP2.multipageBook.Book;
-import JP2.multipageBook.Main;
+
+import multipageBook.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,8 +25,8 @@ public class Controller implements Initializable {
             if(txtName.getText().isEmpty()||txtDescription.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập đầy đủ thông tin sách");
             }
-            JP2.multipageBook.book.list.Controller.editBook.setName(txtName.getText());
-            JP2.multipageBook.book.list.Controller.editBook.setDescription(txtDescription.getText());
+            multipageBook.book.list.Controller.editBook.setName(txtName.getText());
+            multipageBook.book.list.Controller.editBook.setDescription(txtDescription.getText());
             goToList(null);
 
         }catch (Exception e){
@@ -44,9 +44,9 @@ public class Controller implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtName.setText(JP2.multipageBook.book.list.Controller.editBook.getName());
-        txtCode.setText(String.valueOf(JP2.multipageBook.book.list.Controller.editBook.getCode()));
-        txtDescription.setText(JP2.multipageBook.book.list.Controller.editBook.getDescription());
+        txtName.setText(multipageBook.book.list.Controller.editBook.getName());
+        txtCode.setText(String.valueOf(multipageBook.book.list.Controller.editBook.getCode()));
+        txtDescription.setText(multipageBook.book.list.Controller.editBook.getDescription());
         txtCode.setEditable(false);
     }
 }

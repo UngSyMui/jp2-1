@@ -1,17 +1,20 @@
-package JP2.multipageBook;
+package multipageBook.bookmember;
+
+import multipageBook.book.Book;
+import multipageBook.member.Member;
 
 import java.time.LocalDate;
 
 public class BookMember {
     public LocalDate boDate;
     public LocalDate returnDate;
-    public Book boBook;
-    public Member boMember;
+    public multipageBook.book.Book boBook;
+    public multipageBook.member.Member boMember;
 
     public BookMember() {
     }
 
-    public BookMember(LocalDate boDate, LocalDate returnDate, Book boBook, Member boMember) {
+    public BookMember(LocalDate boDate, LocalDate returnDate, multipageBook.book.Book boBook, multipageBook.member.Member boMember) {
         this.boDate = boDate;
         this.returnDate = returnDate;
         this.boBook = boBook;

@@ -1,7 +1,8 @@
-package JP2.multipageBook.member.list;
+package multipageBook.member.list;
 
-import JP2.multipageBook.Main;
-import JP2.multipageBook.Member;
+import multipageBook.Main;
+
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import multipageBook.member.Member;
 
 import java.net.URL;
 import java.util.Collections;
@@ -69,5 +71,14 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         lvMember.setItems(listMember);
         lvMember.refresh();
+    }
+
+
+
+    public void goToMain(ActionEvent actionEvent) throws Exception {
+        Parent listPage = FXMLLoader.load(getClass().getResource("../../main.fxml"));
+        Scene listScene = new Scene(listPage,800,600);
+        Main.bookStage.setTitle("Main");
+        Main.bookStage.setScene(listScene);
     }
 }
