@@ -1,9 +1,13 @@
 package multipageBook.bookmember.form;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import multipageBook.Main;
@@ -11,9 +15,11 @@ import multipageBook.book.Book;
 import multipageBook.bookmember.BookMember;
 import multipageBook.member.Member;
 
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller{
     public TextField txtNameMember;
     public TextField txtCodeMember;
     public TextField txtNameBook;
@@ -23,6 +29,8 @@ public class Controller {
     public Text eMember;
     public Text eBook;
     public Text eDate;
+    public ListView<BookMember> lvBookMember;
+    public static ObservableList<BookMember> listBookMember = FXCollections.observableArrayList();
     public void addBookMember(ActionEvent actionEvent) {
 //        try{
 //
@@ -83,8 +91,8 @@ public class Controller {
             LocalDate bDate = LocalDate.parse(txtBorrow.getText());
             LocalDate rDate =LocalDate.parse(txtReturn.getText());
             BookMember bm = new BookMember(bDate,rDate,multipageBook.book.list.Controller.chooseBook,multipageBook.member.list.Controller.chooseMember);
+            listBookMember.add(bm);
             goToList(null);
-
 
         }catch (Exception e){
             eDate.setVisible(true);
@@ -106,4 +114,5 @@ public class Controller {
         Main.bookStage.setTitle("List BookMember");
         Main.bookStage.setScene(listScene);
     }
+
 }
