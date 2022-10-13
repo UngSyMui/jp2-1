@@ -74,6 +74,9 @@ public class Controller {
 //        }
         try{
             eDate.setVisible(false);
+            if(multipageBook.book.list.Controller.chooseBook==null||multipageBook.member.list.Controller.chooseMember==null){
+                throw new Exception("Vui lòng chọn member,book");
+            }
             if(txtBorrow.getText().isEmpty()||txtReturn.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập ngày mượn, ngày trả");
             }
