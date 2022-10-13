@@ -20,6 +20,10 @@ public class Controller {
         Main.bookStage.setScene(listScene);
     }
 
-    public void goToBookMember(ActionEvent actionEvent) {
+    public void goToBookMember(ActionEvent actionEvent) throws Exception {
+        Parent listPage = FXMLLoader.load(getClass().getResource("bookmember/list/list.fxml"));
+        Scene listScene = new Scene(listPage,800,600);
+        Main.bookStage.setTitle("List BookMember");
+        Main.bookStage.setScene(listScene);
     }
 }
