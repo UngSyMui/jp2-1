@@ -30,6 +30,7 @@ public class Controller {
                 }
             }
             multipageBook.book.list.Controller.listBook.add(b);
+
             goToList(null);
 
         }catch (Exception e){

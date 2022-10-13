@@ -92,6 +92,8 @@ public class Controller{
             LocalDate rDate =LocalDate.parse(txtReturn.getText());
             BookMember bm = new BookMember(bDate,rDate,multipageBook.book.list.Controller.chooseBook,multipageBook.member.list.Controller.chooseMember);
             multipageBook.bookmember.list.Controller.listBookMember.add(bm);
+            multipageBook.book.list.Controller.chooseBook=null;
+            multipageBook.member.list.Controller.chooseMember=null;
             goToList(null);
 
         }catch (Exception e){
