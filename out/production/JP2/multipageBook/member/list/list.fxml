@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multipageBook.member.list.Controller">
+   <children>
+      <ListView fx:id="lvMember" layoutX="117.0" layoutY="83.0" prefHeight="200.0" prefWidth="400.0" />
+      <Button layoutX="430.0" layoutY="48.0" mnemonicParsing="false" onAction="#addMember" text="Add Member" />
+      <Button layoutX="431.0" layoutY="296.0" mnemonicParsing="false" onAction="#sortCode" text="Sort By Code" />
+      <Button layoutX="117.0" layoutY="48.0" mnemonicParsing="false" onAction="#removeMember" text="Remove Member" />
+      <Button layoutX="117.0" layoutY="296.0" mnemonicParsing="false" onAction="#sortName" text="Sort By Name" />
+      <Button layoutX="117.0" layoutY="100.0" mnemonicParsing="false" onAction="#chooseMember" text="ChooseMember" />
+
+      <Button layoutX="241.0" layoutY="48.0" mnemonicParsing="false" onAction="#editMember" text="Edit Member" />
+      <Button onAction="#goToMain" layoutY="48.0" mnemonicParsing="false" text="&lt;&lt;Back To Main" />
+   </children>
+</Pane>
