@@ -12,6 +12,8 @@
       <Button onAction="#sortCode" layoutX="431.0" layoutY="296.0" mnemonicParsing="false" text="Sort By Code" />
       <Button onAction="#removeBook" layoutX="117.0" layoutY="48.0" mnemonicParsing="false" text="Remove Book" />
       <Button onAction="#sortName" layoutX="117.0" layoutY="296.0" mnemonicParsing="false" text="Sort By Name" />
+      <Button onAction="#chooseBook" layoutX="117.0" layoutY="100.0" mnemonicParsing="false" text="ChooseBook" />
+
       <Button onAction="#editBook" layoutX="267.0" layoutY="48.0" mnemonicParsing="false" text="Edit Book" />
       <Button onAction="#goToMain" layoutY="48.0" mnemonicParsing="false" text="&lt;&lt;Back To Main" />
 

@@ -22,6 +22,7 @@ public class Controller implements Initializable {
     public ListView<Member> lvMember;
     public static ObservableList<Member> listMember = FXCollections.observableArrayList();
     public static Member editMember;
+    public static Member chooseMember;
     public void addMember(ActionEvent actionEvent) throws Exception {
         Parent listPage = FXMLLoader.load(getClass().getResource("../form/form.fxml"));
         Scene listScene = new Scene(listPage,800,600);
@@ -80,5 +81,10 @@ public class Controller implements Initializable {
         Scene listScene = new Scene(listPage,800,600);
         Main.bookStage.setTitle("Main");
         Main.bookStage.setScene(listScene);
+    }
+
+    public void chooseMember(ActionEvent actionEvent) {
+        chooseMember=lvMember.getSelectionModel().getSelectedItem();
+        if(chooseMember==null) return;
     }
 }

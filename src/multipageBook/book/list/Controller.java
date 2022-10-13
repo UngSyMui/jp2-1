@@ -20,6 +20,7 @@ public class Controller implements Initializable {
     public ListView<Book> lvBook;
     public static ObservableList<Book> listBook = FXCollections.observableArrayList();
     public static Book editBook;
+    public static Book chooseBook;
 
     public void addBook(ActionEvent actionEvent) throws Exception {
         Parent listPage = FXMLLoader.load(getClass().getResource("../form/form.fxml"));
@@ -76,5 +77,10 @@ public class Controller implements Initializable {
         Scene listScene = new Scene(listPage,800,600);
         Main.bookStage.setTitle("Main");
         Main.bookStage.setScene(listScene);
+    }
+
+    public void chooseBook(ActionEvent actionEvent) {
+        chooseBook =lvBook.getSelectionModel().getSelectedItem();
+        if(chooseBook==null) return;
     }
 }

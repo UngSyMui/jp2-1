@@ -11,6 +11,8 @@
       <Button layoutX="431.0" layoutY="296.0" mnemonicParsing="false" onAction="#sortCode" text="Sort By Code" />
       <Button layoutX="117.0" layoutY="48.0" mnemonicParsing="false" onAction="#removeMember" text="Remove Member" />
       <Button layoutX="117.0" layoutY="296.0" mnemonicParsing="false" onAction="#sortName" text="Sort By Name" />
+      <Button layoutX="117.0" layoutY="100.0" mnemonicParsing="false" onAction="#chooseMember" text="ChooseMember" />
+
       <Button layoutX="241.0" layoutY="48.0" mnemonicParsing="false" onAction="#editMember" text="Edit Member" />
       <Button onAction="#goToMain" layoutY="48.0" mnemonicParsing="false" text="&lt;&lt;Back To Main" />
    </children>
