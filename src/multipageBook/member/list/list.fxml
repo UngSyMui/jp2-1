@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="JP2.multipageBook.member.list.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="lvMember" layoutX="117.0" layoutY="83.0" prefHeight="200.0" prefWidth="400.0" />
+      <Button onAction="#addMember" layoutX="430.0" layoutY="48.0" mnemonicParsing="false" text="Add Member" />
+      <Button onAction="#sortCode" layoutX="431.0" layoutY="296.0" mnemonicParsing="false" text="Sort By Code" />
+      <Button onAction="#removeMember" layoutX="117.0" layoutY="48.0" mnemonicParsing="false" text="Remove Member" />
+      <Button onAction="#sortName" layoutX="117.0" layoutY="296.0" mnemonicParsing="false" text="Sort By Name" />
+      <Button onAction="#editMember" layoutX="241.0" layoutY="48.0" mnemonicParsing="false" text="Edit Member" />
+   </children>
+</Pane>
