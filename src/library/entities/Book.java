@@ -47,5 +47,4 @@ public class Book {
     public void setQty(Integer qty) {
         this.qty = qty;
     }
-
 }

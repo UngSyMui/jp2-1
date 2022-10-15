@@ -4,17 +4,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multipageBook.book.list.Controller">
+
+<Pane fx:controller="multipageBook.book.list.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ListView fx:id="lvBook" layoutX="117.0" layoutY="83.0" prefHeight="200.0" prefWidth="400.0" />
-      <Button layoutX="448.0" layoutY="48.0" mnemonicParsing="false" onAction="#addBook" text="Add Book" />
-      <Button layoutX="431.0" layoutY="296.0" mnemonicParsing="false" onAction="#sortCode" text="Sort By Code" />
-      <Button layoutX="117.0" layoutY="48.0" mnemonicParsing="false" onAction="#removeBook" text="Remove Book" />
-      <Button layoutX="117.0" layoutY="296.0" mnemonicParsing="false" onAction="#sortName" text="Sort By Name" />
-      <Button layoutX="267.0" layoutY="296.0" mnemonicParsing="false" onAction="#chooseBook" text="ChooseBook" />
+      <Button onAction="#addBook" layoutX="448.0" layoutY="48.0" mnemonicParsing="false" text="Add Book" />
+      <Button onAction="#sortCode" layoutX="431.0" layoutY="296.0" mnemonicParsing="false" text="Sort By Code" />
+      <Button onAction="#removeBook" layoutX="117.0" layoutY="48.0" mnemonicParsing="false" text="Remove Book" />
+      <Button onAction="#sortName" layoutX="117.0" layoutY="296.0" mnemonicParsing="false" text="Sort By Name" />
+      <Button onAction="#chooseBook" layoutX="117.0" layoutY="100.0" mnemonicParsing="false" text="ChooseBook" />
 
-      <Button layoutX="267.0" layoutY="48.0" mnemonicParsing="false" onAction="#editBook" text="Edit Book" />
-      <Button layoutY="48.0" mnemonicParsing="false" onAction="#goToMain" text="&lt;&lt;Back To Main" />
+      <Button onAction="#editBook" layoutX="267.0" layoutY="48.0" mnemonicParsing="false" text="Edit Book" />
+      <Button onAction="#goToMain" layoutY="48.0" mnemonicParsing="false" text="&lt;&lt;Back To Main" />
 
    </children>
 </Pane>

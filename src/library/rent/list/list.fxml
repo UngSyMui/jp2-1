@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="library.rent.list.RentListController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox fx:id="cbBook" layoutX="65.0" layoutY="103.0" prefWidth="150.0" promptText="Book" />
+      <ComboBox fx:id="cbStudent" layoutX="393.0" layoutY="103.0" prefWidth="150.0" promptText="Student" />
+      <Text layoutX="271.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rents">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button onAction="#goToMain" layoutX="65.0" layoutY="48.0" mnemonicParsing="false" text="&lt;&lt;Back" />
+      <Button onAction="#goToForm" layoutX="475.0" layoutY="52.0" mnemonicParsing="false" text="New Rent" />
+   </children>
+</Pane>

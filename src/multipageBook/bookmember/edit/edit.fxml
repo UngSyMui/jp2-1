@@ -5,8 +5,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <TextField layoutX="30.0" layoutY="53.0" prefHeight="25.0" prefWidth="246.0" promptText="Name Member" />
+      <TextField layoutX="30.0" layoutY="104.0" prefHeight="25.0" prefWidth="246.0" promptText="Code Member" />
+      <TextField layoutX="340.0" layoutY="104.0" prefHeight="25.0" prefWidth="246.0" promptText="Code Book" />
+      <TextField layoutX="340.0" layoutY="53.0" prefHeight="25.0" prefWidth="246.0" promptText="Name Book" />
       <TextField layoutX="190.0" layoutY="188.0" prefHeight="25.0" prefWidth="246.0" promptText="Borrow Date" />
       <TextField layoutX="190.0" layoutY="239.0" prefHeight="25.0" prefWidth="246.0" promptText="Return Date" />
       <Text fill="#f20606" layoutX="253.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />

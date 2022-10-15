@@ -1,30 +1,43 @@
-package library.students.list;
+package library.student.list;
 
+import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import library.entities.Book;
+import library.Main;
 import library.entities.Student;
+import library.helper.Connector;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class StudentListController implements Initializable {
     public TableView<Student> tbStudent;
-    public TableColumn<Student,Integer> tdId;
-    public TableColumn<Student,String> tdName;
-    public TableColumn<Student,String> tdEmail;
-    public TableColumn<Student,String> tdTel;
-    public final static String connectionString ="jdbc:mysql://localhost:3306/t2203e";
-    public final static String user="root";
-    public final static String pwd=""; //mamp:"root"
+    public TableColumn<Student, Integer> tdId;
+    public TableColumn<Student, String> tdName;
+    public TableColumn<Student, String> tdEmail;
+    public TableColumn<Student, String> tdTel;
+
+    public void goToMain(ActionEvent actionEvent) throws Exception {
+        Parent home = FXMLLoader.load(getClass().getResource("../../home.fxml"));
+        Main.rootStage.setTitle("Home");
+        Main.rootStage.setScene(new Scene(home,800,600));
+    }
+
+    public void goToCreate(ActionEvent actionEvent) throws Exception {
+        Parent createStudent = FXMLLoader.load(getClass().getResource("../create/create.fxml"));
+        Main.rootStage.setTitle("Add Student");
+        Main.rootStage.setScene(new Scene(createStudent,800,600));
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -34,25 +47,23 @@ public class StudentListController implements Initializable {
         tdTel.setCellValueFactory(new PropertyValueFactory<Student,String>("tel"));
         ObservableList<Student> listStudent = FXCollections.observableArrayList();
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(connectionString,user,pwd);
-            Statement statement = conn.createStatement();
             String sql_txt = "select * from students";
-            ResultSet rs = statement.executeQuery(sql_txt);
+            Connector conn = Connector.getInstance();
+            ResultSet rs = conn.query(sql_txt);
             while (rs.next()){
-                int id = rs.getInt("id");
+                int id = rs.getInt("sid");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String tel = rs.getString("tel");
-                Student b = new Student(id,name,email,tel);
-                listStudent.add(b);
+                Student s = new Student(id,name,email,tel);
+                listStudent.add(s);
             }
-
 
         }catch (Exception e){
             System.out.println(e.getMessage());
         }finally {
             tbStudent.setItems(listStudent);
         }
+
     }
 }
