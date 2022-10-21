@@ -52,7 +52,7 @@ public class Connector {
     public PreparedStatement getPreparedStatement(String sql) throws Exception{
         return conn.prepareStatement(sql);
     }
-    public boolean execute(String sql, ArrayList parameters) throws Exception{
+    public boolean execute(String sql, ArrayList parameters){
        try{
            PreparedStatement pstm = getPreparedStatement(sql);
            for(int i=0;i<parameters.size();i++){
@@ -70,7 +70,7 @@ public class Connector {
        }
        return true;
     }
-    public ResultSet executeQuery(String sql, ArrayList parameters) throws Exception{
+    public ResultSet executeQuery(String sql, ArrayList parameters){
         try{
             PreparedStatement pstm = getPreparedStatement(sql);
             for(int i=0;i<parameters.size();i++){

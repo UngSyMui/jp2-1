@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.student.edit.StudentEditController">
+   <children>
+      <TextField fx:id="txtName" layoutX="220.0" layoutY="97.0" promptText="Name" />
+      <TextField fx:id="txtEmail" layoutX="220.0" layoutY="163.0" promptText="Author" />
+      <TextField fx:id="txtTel" layoutX="220.0" layoutY="230.0" promptText="Qty" />
+      <Button layoutX="315.0" layoutY="289.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button layoutX="105.0" layoutY="72.0" mnemonicParsing="false" onAction="#backToList" text="&lt;&lt;Back" />
+      <Button onAction="#delete" layoutX="220.0" layoutY="289.0" mnemonicParsing="false" text="Delete" />
+   </children>
+</Pane>

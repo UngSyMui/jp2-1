@@ -18,4 +18,10 @@ public class HomeController {
         Main.rootStage.setTitle("Students");
         Main.rootStage.setScene(new Scene(listStudent,800,600));
     }
+
+    public void goToRents(ActionEvent actionEvent) throws Exception {
+        Parent list = FXMLLoader.load(getClass().getResource("bookrents/create/create.fxml"));
+        Main.rootStage.setTitle("Book Rent");
+        Main.rootStage.setScene(new Scene(list,800,600));
+    }
 }

@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import library.Main;
+import library.dao.impls.StudentRepository;
+import library.entities.Book;
+import library.entities.Student;
 import library.helper.Connector;
 
 import java.util.ArrayList;
@@ -19,16 +22,12 @@ public class StudentCreateController {
             String name = txtName.getText();
             String email = txtEmail.getText();
             String tel = txtTel.getText();
-            String sql_txt ="insert into students(name,email,tel) values(?,?,?)";
-            Connector conn = Connector.getInstance();
-            ArrayList arr = new ArrayList();
-            arr.add(name);
-            arr.add(email);
-            arr.add(tel);
-            if(conn.execute(sql_txt,arr)){
+            Student s = new Student(null,name,email,tel);
+            StudentRepository sp = new StudentRepository();
+            if(sp.create(s)){
                 goToList(null);
             }else {
-                System.out.println("Errors");
+                System.out.println("Error");
             }
 
         }catch (Exception e){

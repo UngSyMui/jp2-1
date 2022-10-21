@@ -20,7 +20,7 @@
           <TableColumn fx:id="tdName" prefWidth="125.0" text="Name" />
             <TableColumn fx:id="tdEmail" prefWidth="117.0" text="Email" />
             <TableColumn fx:id="tdTel" prefWidth="106.0" text="Tel" />
-            <TableColumn prefWidth="100.0" text="Action" />
+            <TableColumn fx:id="tdEdit" prefWidth="100.0" text="Action" />
         </columns>
       </TableView>
    </children>
