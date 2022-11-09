@@ -1,6 +1,5 @@
 package library.student.list;
 
-import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,11 +14,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import library.Main;
 import library.dao.impls.StudentRepository;
 import library.entities.Student;
-import library.helper.Connector;
+import library.enums.RepoType;
+import library.factory.RepositoryFactory;
 
 import java.net.URL;
-import java.sql.ResultSet;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class StudentListController implements Initializable {
@@ -50,7 +48,7 @@ public class StudentListController implements Initializable {
         tdTel.setCellValueFactory(new PropertyValueFactory<Student,String>("tel"));
         tdEdit.setCellValueFactory(new PropertyValueFactory<Student,Button>("edit"));
         ObservableList<Student> listStudent = FXCollections.observableArrayList();
-        StudentRepository sp = new StudentRepository();
+        StudentRepository sp = (StudentRepository) RepositoryFactory.createRepository(RepoType.STUDENT);
         listStudent.addAll(sp.all());
         tbStudent.setItems(listStudent);
 
