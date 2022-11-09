@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group2JP2.orderticket.edit.EditOrderController">
+   <children>
+      <Text fill="#b81818e0" layoutX="235.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORDER INFORMATION" textAlignment="CENTER">
+         <font>
+            <Font name="Wide Latin" size="36.0" />
+         </font>
+      </Text>
+
+      <Button layoutX="160.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="42.0" text="Go To List Film" textFill="#b81818e0" textOverrun="CLIP">
+         <font>
+            <Font name="Franklin Gothic Heavy" size="16.0" />
+         </font></Button>
+      <TableView fx:id="tbMovieTicket" layoutX="14.0" layoutY="159.0" prefHeight="308.0" prefWidth="1229.0">
+        <columns>
+          <TableColumn fx:id="tdIdTicket" prefWidth="82.0" text="IdTicket" />
+          <TableColumn fx:id="tdNameFilm" prefWidth="307.0" text="Name Of Film" />
+            <TableColumn fx:id="tdStarShow" prefWidth="179.0" text="Start Show" />
+            <TableColumn fx:id="tdEndShow" prefWidth="183.0" text="End Show" />
+            <TableColumn fx:id="tdSeatName" prefWidth="134.0" text="Seat" />
+            <TableColumn fx:id="tdRoomName" prefWidth="153.0" text="Room" />
+            <TableColumn fx:id="tdPrice" prefWidth="117.0" text="Price" />
+            <TableColumn fx:id="tdAction" prefWidth="213.0" sortType="DESCENDING" text="Action" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtTotalMoney" layoutX="1056.0" layoutY="514.0" />
+      <Text fill="#b81818e0" fontSmoothingType="LCD" layoutX="938.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Money">
+         <font>
+            <Font name="Franklin Gothic Heavy" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToListOrder" prefHeight="42.0" text="Go To List Order" textFill="#b81818e0">
+         <font>
+            <Font name="Franklin Gothic Heavy" size="16.0" />
+         </font></Button>
+      <TextField fx:id="txtQtyTicket" layoutX="1056.0" layoutY="475.0" />
+      <Text fill="#b81818e0" fontSmoothingType="LCD" layoutX="938.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty Ticket">
+         <font>
+            <Font name="Franklin Gothic Heavy" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

@@ -7,11 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import library.Main;
 import library.dao.impls.StudentRepository;
-import library.entities.Book;
 import library.entities.Student;
-import library.helper.Connector;
-
-import java.util.ArrayList;
 
 public class StudentCreateController {
     public TextField txtName;

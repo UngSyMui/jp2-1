@@ -20,10 +20,9 @@ public class StudentRepository implements IStudentRepository {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String tel = rs.getString("tel");
-                Student s = new Student(id,name,email,tel);
-                listStudent.add(s);
+                Student st = new Student(id,name,email,tel);
+                listStudent.add(st);
             }
-
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -31,14 +30,14 @@ public class StudentRepository implements IStudentRepository {
     }
 
     @Override
-    public boolean create(Student st) {
+    public boolean create(Student student) {
         try{
-            String sql_txt = "insert into students(name,email,tel) values(?,?,?)";
+            String sql_txt ="insert into students(name,email,tel) values(?,?,?)";
             Connector conn = Connector.getInstance();
             ArrayList arr = new ArrayList<>();
-            arr.add(st.getName());
-            arr.add(st.getEmail());
-            arr.add(st.getTel());
+            arr.add(student.getName());
+            arr.add(student.getEmail());
+            arr.add(student.getTel());
             if(conn.execute(sql_txt,arr)){
                 return true;
             }
@@ -50,38 +49,36 @@ public class StudentRepository implements IStudentRepository {
     }
 
     @Override
-    public boolean update(Student st) {
+    public boolean update(Student student) {
         try{
-            String sql_txt = "update students set name =?, email =?,tel =? where sid =?";
+            String sql_txt = "update students set name=?, email=?,tel=? where sid=?";
             Connector conn = Connector.getInstance();
             ArrayList arr = new ArrayList<>();
-            arr.add(st.getName());
-            arr.add(st.getEmail());
-            arr.add(st.getTel());
-            arr.add(st.getId());
-            
+            arr.add(student.getName());
+            arr.add(student.getEmail());
+            arr.add(student.getTel());
+            arr.add(student.getId());
             if(conn.execute(sql_txt,arr)){
                 return true;
             }
-
-        }catch(Exception e){
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
         return false;
     }
 
     @Override
-    public boolean delete(Student st) {
+    public boolean delete(Student student) {
         try{
             String sql_txt = "delete from students where sid =?";
             Connector conn = Connector.getInstance();
             ArrayList arr = new ArrayList<>();
-            arr.add(st.getId());
+            arr.add(student.getId());
             if(conn.execute(sql_txt,arr)){
                 return true;
             }
         }catch (Exception e){
-
+            System.out.println(e.getMessage());
         }
         return false;
     }
@@ -89,7 +86,7 @@ public class StudentRepository implements IStudentRepository {
     @Override
     public Student findOne(Integer id) {
         try{
-            String sql_txt ="select * from students where id = ?";
+            String sql_txt = "select * from students where sid=?";
             Connector conn = Connector.getInstance();
             ArrayList arr = new ArrayList<>();
             arr.add(id);
@@ -102,7 +99,7 @@ public class StudentRepository implements IStudentRepository {
                 return new Student(Id,name,email,tel);
             }
         }catch (Exception e){
-
+            System.out.println(e.getMessage());
         }
         return null;
     }
