@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baithi.create.CreateController">
+   <children>
+      <Text layoutX="241.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Student">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtId" layoutX="226.0" layoutY="110.0" promptText="ID" />
+      <TextField fx:id="txtName" layoutX="226.0" layoutY="152.0" promptText="Name" />
+      <TextField fx:id="txtAddress" layoutX="226.0" layoutY="194.0" promptText="Address" />
+      <TextField fx:id="txtPhone" layoutX="226.0" layoutY="235.0" promptText="Phone" />
+      <Button layoutX="375.0" layoutY="287.0" mnemonicParsing="false" onAction="#create" text="Create" />
+      <Button layoutX="116.0" layoutY="110.0" mnemonicParsing="false" onAction="#goToHome" text="&lt;&lt;Back" />
+      <Button layoutX="426.0" layoutY="110.0" mnemonicParsing="false" onAction="#goToList" text="Go To List" />
+      <Text fx:id="error" fill="#f80808" layoutX="226.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</Pane>
