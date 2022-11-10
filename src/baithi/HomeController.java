@@ -15,4 +15,14 @@ public class HomeController {
         Parent list = FXMLLoader.load(getClass().getResource("list/list.fxml"));
         Main.bStage.setScene(new Scene(list,Main.width,Main.height));
     }
+     public void save(ActionEvent actionEvent) {
+        try {
+            FileWriter fw = new FileWriter("hocsinh.txt");
+            fw.write(CreateController.listStudent.toString());
+            fw.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("Success...");
+    }
 }
